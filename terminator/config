@@ -1,0 +1,25 @@
+[global_config]
+  window_state = maximise
+  extra_styling = False
+  suppress_multiple_term_dialog = True
+[keybindings]
+  go_up = <Alt>k
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  layout_launcher = None
+[profiles]
+  [[default]]
+    icon_bell = False
+    cursor_color = "#aaaaaa"
+    show_titlebar = False
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
