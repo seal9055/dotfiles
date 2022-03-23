@@ -25,6 +25,7 @@ sudo apt -y install \
     cargo \
     polybar \
     zoxide \
+    lightdm \
     nvidia-driver-510
 
 sudo snap install \
@@ -50,9 +51,6 @@ sudo apt install python3 python3-pip python3-dev git libssl-dev libffi-dev build
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade pwntools
 
-# Configure cargo
-#rustup default nightly && rustup update
-
 # Download rust analyzer
 #mkdir -p /home/seal/.local/bin
 #curl -L
@@ -64,8 +62,8 @@ python3 -m pip install --upgrade pwntools
 wget https://www.sweetscape.com/download/010EditorLinux64Installer.tar.gz -O /home/seal/Downloads/010Installer.tar.gz
 
 # PWNDBG
-git clone https://github.com/pwndbg/pwndbg
-cd pwndbg
+git clone https://github.com/pwndbg/pwndbg -O /home/seal/pwndbg
+cd /home/seal/pwndbg
 ./setup.sh
 
 # Copy dotfiles
@@ -86,3 +84,5 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 chsh -s $(which zsh)
 sudo ln -s /usr/bin/nvim /usr/bin/vim
+git config --global user.email "seal9055@gmail.com"
+git config --global user.name "seal9055"
