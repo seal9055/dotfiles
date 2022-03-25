@@ -21,17 +21,15 @@ sudo apt -y install \
     cscope \
     feh \
     htop \
-    bspwm \
+    bspwm polybar dmenu \
     cargo \
-    polybar \
     zoxide \
     lightdm \
-    python3 \
-    python3-pip \
-    python3-dev \
-    libssl-dev \
-    libffi-dev \
+    python3 python3-pip python3-dev libssl-dev libffi-dev \
     build-essential \
+    cpu-checker \
+    qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager \
+    libreoffice \
     nvidia-driver-510
 
 sudo snap install \
@@ -82,6 +80,7 @@ cp /home/seal/dotfiles/.zshrc /home/seal/.zshrc
 cp /home/seal/dotfiles/init.vim /home/seal/.config/nvim
 cp /home/seal/dotfiles/.gdbinit /home/seal/.gdbinit
 cp /home/seal/dotfiles/background.jpg /home/seal/
+cp /home/seal/dotfiles/90-brightnessctl.rules /usr/lib/udev/rules.d/
 
 # vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
