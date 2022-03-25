@@ -22,12 +22,13 @@ super + shift + equal
 super + space
 	dmenu_run
 
-XF86AudioRaiseVolume
-    amixer -D pulse sset Master 5%+
-XF86AudioLowerVolume
-    amixer -D pulse sset Master 5%-
-XF86AudioMute
-    amixer -D pulse sset Master toggle
+# Audio
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+    amixer -D pulse sset Master {5%+,5%-,toggle}
+
+# Brightness
+XF86MonBrightness{Up,Down}
+    brightnessctl set {+10,10-}
 
 # make sxhkd reload its configuration files:
 super + Escape
