@@ -10,6 +10,7 @@ sudo apt upgrade
 sudo apt -y install \
     terminator \
     bat \
+    gawk \
     curl \
     zsh \
     flameshot \
@@ -22,7 +23,6 @@ sudo apt -y install \
     feh \
     htop \
     bspwm polybar dmenu \
-    cargo \
     zoxide \
     lightdm \
     python3 python3-pip python3-dev libssl-dev libffi-dev \
@@ -30,14 +30,11 @@ sudo apt -y install \
     cpu-checker \
     qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager \
     libreoffice \
+    gdb-multiarch \
     nvidia-driver-510
 
 sudo snap install \
     discord \
-    rustup \
-
-# Updated version of cargo
-#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # NVIM
 curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage \
@@ -91,3 +88,13 @@ sudo ln -s /usr/bin/nvim /usr/bin/vim
 sudo usermod -a -G video seal
 git config --global user.email "seal9055@gmail.com"
 git config --global user.name "seal9055"
+git config --add oh-my-zsh.hide-status 1
+git config --add oh-my-zsh.hide-dirty 1
+
+echo "Rust:"
+echo "\tcurl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+echo "\tAdd ~/.cargo/bin to path"
+echo "Markdown:"
+echo "\tsudo apt install -y npm nodejs yarn"
+echo "\thttps://github.com/iamcco/markdown-preview.nvim"
+
