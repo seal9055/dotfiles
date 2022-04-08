@@ -7,6 +7,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # Defaults
+# polybar \ apt command only works on 21.10+
 sudo apt -y install \
     terminator \
     bat \
@@ -22,8 +23,8 @@ sudo apt -y install \
     cscope \
     feh \
     htop \
-    bspwm polybar dmenu \
-    zoxide \
+    bspwm \
+    dmenu \
     lightdm \
     python3 python3-pip python3-dev libssl-dev libffi-dev \
     build-essential \
@@ -31,13 +32,14 @@ sudo apt -y install \
     qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager \
     libreoffice \
     gdb-multiarch \
+    brightnessctl \
     nvidia-driver-510
 
 sudo snap install \
     discord \
 
 # NVIM
-curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage \
+sudo curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage \
     -o /usr/bin/nvim && sudo chmod +x /usr/bin/nvim
 
 # NVIM Plug
@@ -46,6 +48,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# zoxide
+curl -sS https://webinstall.dev/zoxide | bash
 
 # Pwntools
 python3 -m pip install --upgrade pip
