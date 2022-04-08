@@ -4,7 +4,7 @@
 if [[ $(id -u) == 0 ]] ; then echo "Don't run as root" ; exit 1 ; fi
 
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 
 # Defaults
 sudo apt -y install \
@@ -92,9 +92,9 @@ git config --add oh-my-zsh.hide-status 1
 git config --add oh-my-zsh.hide-dirty 1
 
 echo "Rust:"
-echo "\tcurl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
-echo "\tAdd ~/.cargo/bin to path"
+echo "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+echo "Add ~/.cargo/bin to path"
 echo "Markdown:"
-echo "\tsudo apt install -y npm nodejs yarn"
-echo "\thttps://github.com/iamcco/markdown-preview.nvim"
+echo "    sudo apt install -y npm nodejs yarn"
+echo "    https://github.com/iamcco/markdown-preview.nvim"
 echo ":LspInstall rust_analyzer"
