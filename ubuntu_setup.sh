@@ -97,4 +97,5 @@ echo "\tAdd ~/.cargo/bin to path"
 echo "Markdown:"
 echo "\tsudo apt install -y npm nodejs yarn"
 echo "\thttps://github.com/iamcco/markdown-preview.nvim"
+echo ":LspInstall rust_analyzer"
 
