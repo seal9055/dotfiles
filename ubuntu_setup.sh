@@ -33,10 +33,14 @@ sudo apt -y install \
     libreoffice \
     gdb-multiarch \
     brightnessctl \
+    patchelf \
+    rubygems \
     nvidia-driver-510
 
 sudo snap install \
     discord \
+
+sudo gem install one_gadget
 
 # NVIM
 sudo curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage \
@@ -103,3 +107,8 @@ echo "Markdown:"
 echo "    sudo apt install -y npm nodejs yarn"
 echo "    https://github.com/iamcco/markdown-preview.nvim"
 echo ":LspInstall rust_analyzer"
+echo "sudo apt-get install libsecret-1-0 libsecret-1-dev"
+echo "cd /usr/share/doc/git/contrib/credential/libsecret"
+echo "sudo make"
+echo "git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret"
+
