@@ -14,6 +14,7 @@ sudo apt -y install \
     gawk \
     curl \
     zsh \
+    ctags \
     flameshot \
     curl \
     ripgrep \
@@ -39,6 +40,7 @@ sudo apt -y install \
 
 sudo snap install \
     discord \
+    ccls --classic \
 
 sudo gem install one_gadget
 
@@ -97,18 +99,22 @@ sudo ln -s /usr/bin/nvim /usr/bin/vim
 sudo usermod -a -G video seal
 git config --global user.email "seal9055@gmail.com"
 git config --global user.name "seal9055"
-git config --add oh-my-zsh.hide-status 1
-git config --add oh-my-zsh.hide-dirty 1
 
 echo "Rust:"
 echo "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
 echo "Add ~/.cargo/bin to path"
 echo "Markdown:"
 echo "    sudo apt install -y npm nodejs yarn"
-echo "    https://github.com/iamcco/markdown-preview.nvim"
+echo "    :call mkdp#util#install()"
 echo ":LspInstall rust_analyzer"
 echo "sudo apt-get install libsecret-1-0 libsecret-1-dev"
 echo "cd /usr/share/doc/git/contrib/credential/libsecret"
 echo "sudo make"
 echo "git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret"
+echo "Bookmarks:"
+echo "    https://doc.rust-lang.org/std/"
+echo "    https://defuse.ca/online-x86-assembler.htm"
+echo "    https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md"
+echo "    https://www.agner.org/optimize/instruction_tables.pdf"
+echo "    https://www.thegeekstuff.com/2010/10/linux-error-codes/"
 
