@@ -7,14 +7,13 @@ sudo apt update
 sudo apt upgrade -y
 
 # Defaults
-# polybar \ apt command only works on 21.10+
+# polybar, ctags manually
 sudo apt -y install \
     terminator \
     bat \
     gawk \
     curl \
     zsh \
-    ctags \
     flameshot \
     curl \
     ripgrep \
@@ -36,6 +35,8 @@ sudo apt -y install \
     brightnessctl \
     patchelf \
     rubygems \
+    libfuse2 \
+    zoxide \
     nvidia-driver-510
 
 sudo snap install \
@@ -54,9 +55,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# zoxide
-curl -sS https://webinstall.dev/zoxide | bash
 
 # Pwntools
 python3 -m pip install --upgrade pip
