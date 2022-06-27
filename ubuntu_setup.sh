@@ -7,13 +7,14 @@ sudo apt update
 sudo apt upgrade -y
 
 # Defaults
-# polybar, ctags manually
 sudo apt -y install \
+    polybar \
     terminator \
     bat \
     gawk \
     curl \
     zsh \
+    universal-ctags \
     flameshot \
     curl \
     ripgrep \
@@ -26,6 +27,8 @@ sudo apt -y install \
     bspwm \
     dmenu \
     lightdm \
+    libsecret-1-0 libsecret-1-dev \
+    npm nodejs yarn \
     python3 python3-pip python3-dev libssl-dev libffi-dev \
     build-essential \
     cpu-checker \
@@ -59,13 +62,6 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # Pwntools
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade pwntools
-
-# Download rust analyzer
-#mkdir -p /home/seal/.local/bin
-#curl -L
-#https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz
-#| gunzip -c - > /home/seal/.local/bin/rust-analyzer
-#chmod +x /home/seal/.local/bin/rust-analyzer
 
 # 010 Editor
 wget https://www.sweetscape.com/download/010EditorLinux64Installer.tar.gz -O /home/seal/Downloads/010Installer.tar.gz
@@ -102,10 +98,8 @@ echo "Rust:"
 echo "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
 echo "Add ~/.cargo/bin to path"
 echo "Markdown:"
-echo "    sudo apt install -y npm nodejs yarn"
 echo "    :call mkdp#util#install()"
 echo ":LspInstall rust_analyzer"
-echo "sudo apt-get install libsecret-1-0 libsecret-1-dev"
 echo "cd /usr/share/doc/git/contrib/credential/libsecret"
 echo "sudo make"
 echo "git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret"
