@@ -15,6 +15,7 @@ Plug 'luochen1990/rainbow'		                                         " Rainbow p
 Plug 'junegunn/fzf.vim'                                                  " fuzzy search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }        " fzf
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markdown preview
+Plug 'lervag/vimtex'                                                     " Latex (\ll to compile)
 
 call plug#end()
 
@@ -210,9 +211,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Resize splits using ctrl-m & ctrl-n
-nmap          <C-m>     <C-W>+<SID>ws
+nmap          <C-b>     <C-W>+<SID>ws
 nmap          <C-n>     <C-W>-<SID>ws
-nn <script>   <SID>sm   <C-W>+<SID>ws
+nn <script>   <SID>sb   <C-W>+<SID>ws
 nn <script>   <SID>sn   <C-W>-<SID>ws
 nmap          <SID>s    <Nop>
 

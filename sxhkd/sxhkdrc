@@ -18,9 +18,17 @@ super + shift + {1-9,0}
 super + shift + equal
     bspc node -m last --follow
 
-# program launcher
+# program launcher 1
+super + d
+    dmenu_run
+
+# program launcher 2
 super + space
-	dmenu_run
+    dmenu_run
+
+# program launcher 3
+super + @space
+    dmenu_run
 
 # Audio
 XF86Audio{RaiseVolume,LowerVolume,Mute}
@@ -28,7 +36,7 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 
 # Brightness
 XF86MonBrightness{Up,Down}
-    brightnessctl set {+10,10-}
+    brightnessctl set {+100,100-}
 
 # make sxhkd reload its configuration files:
 super + Escape
