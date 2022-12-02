@@ -10,6 +10,15 @@ super + Return
 super + b
 	firefox
 
+super + q
+	flameshot gui
+
+super + r
+	shutdown -r 0
+
+super + t
+	shutdown 0
+
 # Send to desktop
 super + shift + {1-9,0}
     bspc node -d '^{1-9,10}' --follow
