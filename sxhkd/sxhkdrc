@@ -10,8 +10,13 @@ super + Return
 super + b
 	firefox
 
+# Screenshot to clipboard
 super + q
     scrot -s -e 'xclip -selection clipboard -t image/png -i $f' && rm ~/*.png
+
+# Screenshot to ~/Pictures/
+super + a
+    scrot -s ~/Pictures/%b%d::%H%M%S.png
 
 super + r
 	shutdown -r 0
