@@ -15,7 +15,6 @@ sudo apt -y install \
     curl \
     zsh \
     universal-ctags \
-    flameshot \
     curl \
     ripgrep \
     make \
