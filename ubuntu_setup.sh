@@ -26,7 +26,7 @@ sudo apt -y install \
     htop \
     bspwm \
     dmenu \
-    lightdm \
+    cmake \
     libsecret-1-0 libsecret-1-dev \
     npm nodejs yarn \
     python3 python3-pip python3-dev libssl-dev libffi-dev \
@@ -40,6 +40,10 @@ sudo apt -y install \
     rubygems \
     libfuse2 \
     zoxide \
+    calibre \
+    wireshark \
+    7zip \
+
     nvidia-driver-510
 
 sudo snap install \
