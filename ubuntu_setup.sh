@@ -26,6 +26,7 @@ sudo apt -y install \
     bspwm \
     dmenu \
     cmake \
+    scrot \
     libsecret-1-0 libsecret-1-dev \
     npm nodejs yarn \
     python3 python3-pip python3-dev libssl-dev libffi-dev \
@@ -98,14 +99,17 @@ git config --global user.email "seal9055@gmail.com"
 git config --global user.name "seal9055"
 
 echo "Rust:"
-echo "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
-echo "Add ~/.cargo/bin to path"
+echo "      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+echo "      Add ~/.cargo/bin to path"
 echo "Markdown:"
 echo "    :call mkdp#util#install()"
-echo ":LspInstall rust_analyzer"
-echo "cd /usr/share/doc/git/contrib/credential/libsecret"
-echo "sudo make"
-echo "git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret"
+echo "    :LspInstall rust_analyzer"
+echo "Spotify:"
+echo "      cargo install ncspot"
+echo "Github:"
+echo "      cd /usr/share/doc/git/contrib/credential/libsecret"
+echo "      sudo make"
+echo "      git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret"
 echo "Bookmarks:"
 echo "    https://doc.rust-lang.org/std/"
 echo "    https://defuse.ca/online-x86-assembler.htm"
