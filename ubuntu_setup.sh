@@ -8,6 +8,7 @@ sudo apt upgrade -y
 
 # Defaults
 sudo apt -y install \
+    gdbserver \
     polybar \
     terminator \
     bat \
