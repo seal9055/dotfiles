@@ -44,6 +44,7 @@ sudo apt -y install \
     calibre \
     wireshark \
     7zip \
+    xclip \
 
     nvidia-driver-510
 
@@ -69,7 +70,7 @@ python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade pwntools
 
 # 010 Editor
-wget https://www.sweetscape.com/download/010EditorLinux64Installer.tar.gz -O /home/seal/Downloads/010Installer.tar.gz
+wget https://download.sweetscape.com/010EditorLinux64Installer12.0.1.tar.gz -O /home/seal/Downloads/010Installer.tar.gz
 
 # PWNDBG
 git clone https://github.com/pwndbg/pwndbg /home/seal/pwndbg
