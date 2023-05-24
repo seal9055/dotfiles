@@ -44,6 +44,7 @@ sudo apt -y install \
     calibre \
     wireshark \
     7zip \
+    xclip \
 
     nvidia-driver-510
 

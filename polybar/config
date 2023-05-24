@@ -40,9 +40,9 @@ label-separator-foreground = #a1ebd6
 [module/battery]
 type = internal/battery
 full-at = 99
-low-at = 5
+low-at = 1
 
-battery = BAT1
+battery = BAT0
 
 poll-interval = 1
 

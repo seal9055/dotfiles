@@ -42,7 +42,7 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'ccls'}
+local servers = {'ccls', 'rust_analyzer'}
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
@@ -175,6 +175,8 @@ map <F6> :Startify <CR>
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>q :bd<CR>
 nmap <leader>w :w<CR>
+nmap <leader>1 :LspStop<CR>
+nmap <leader>2 :LspStart<CR>
 "map <leader>s :Format<CR>
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
@@ -210,7 +212,7 @@ noremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Resize splits using ctrl-m & ctrl-n
+" Resize splits using ctrl-b & ctrl-n
 nmap          <C-b>     <C-W>+<SID>ws
 nmap          <C-n>     <C-W>-<SID>ws
 nn <script>   <SID>sb   <C-W>+<SID>ws
@@ -244,6 +246,16 @@ nmap <leader>sh :History/<CR>
 nmap <F1> <plug>(fzf-maps-n)
 imap <F1> <plug>(fzf-maps-i)
 vmap <F1> <plug>(fzf-maps-x)
+
+" Toggle line numbers using `<leader>-l`
+function! NumberToggle()
+  if(&rnu == 1)
+    set nornu nonu
+  else
+    set rnu
+  endif
+endfunc
+nnoremap <leader>l :call NumberToggle()<cr>
 
 " }}}
 
