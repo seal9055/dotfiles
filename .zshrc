@@ -84,10 +84,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../../'
 alias bat='batcat --paging=never'
-alias school="ssh gilberthoerm@elnux.cs.umass.edu"
-alias schoolget="sftp gilberthoerm@elnux.cs.umass.edu"
-alias proton1="protonvpn-cli connect"
-alias proton2="protonvpn-cli disconnect"
 alias cr='clear && cargo run'
 alias crr='clear && cargo run --release'
 alias ct='clear && cargo test'
@@ -105,8 +101,6 @@ function gz() {
     git commit -m "$1"
 }
 alias up='git push origin main'
-
-alias arm_gdb='/home/seal/github/private/590j/gdb/workdir/install/bin/aarch64-linux-gnu-gdb'
 
 # User configuration
 
@@ -133,13 +127,12 @@ alias arm_gdb='/home/seal/github/private/590j/gdb/workdir/install/bin/aarch64-li
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=~/depot_tools:/home/seal/.pyenv/plugins/pyenv-virtualenv/shims:/home/seal/.pyenv/shims:/home/seal/.pyenv/bin:/home/seal/.pyenv/plugins/pyenv-virtualenv/shims:/home/seal/.pyenv/shims:/home/seal/.pyenv/bin:/home/seal/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/seal/.local/bin:/home/seal/go/bin:/home/seal/.local/share/nvim/lsp_servers/rust/
 
 eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-PATH=$PATH:/home/seal/010editor;export PATH; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 87FF8EFC-483D-BCAA-D67D-735CF60410D1 6DA6B95B-0097-1E4B-49F4-ABD919B5F7EB
 export PATH=/home/seal/depot_tools:/home/seal/.pyenv/plugins/pyenv-virtualenv/shims:/home/seal/.pyenv/shims:/home/seal/.pyenv/bin:/home/seal/.pyenv/plugins/pyenv-virtualenv/shims:/home/seal/.pyenv/shims:/home/seal/.pyenv/bin:/home/seal/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/seal/.local/bin:/home/seal/go/bin:/home/seal/.local/share/nvim/lsp_servers/rust/:/home/seal/.fzf/bin:/home/seal/010editor
+
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
