@@ -30,5 +30,8 @@ bspc config gapless_monocle      true
 bspc rule -a discord desktop='^1'
 bspc rule -a spotify desktop='^2'
 
+# VMWare Copy-paste support
+vmware-user-suid-wrapper
+
 discord
 /home/seal/.config/polybar/monitors.sh

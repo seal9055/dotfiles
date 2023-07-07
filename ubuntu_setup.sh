@@ -45,7 +45,6 @@ sudo apt -y install \
     wireshark \
     7zip \
     xclip \
-
     nvidia-driver-510
 
 sudo snap install \
@@ -112,6 +111,8 @@ echo "Github:"
 echo "      cd /usr/share/doc/git/contrib/credential/libsecret"
 echo "      sudo make"
 echo "      git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret"
+echo "General:"
+echo "      xset r rate 240 60"
 echo "Bookmarks:"
 echo "    https://doc.rust-lang.org/std/"
 echo "    https://defuse.ca/online-x86-assembler.htm"
