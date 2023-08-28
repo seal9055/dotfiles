@@ -16,6 +16,7 @@ Plug 'junegunn/fzf.vim'                                                  " fuzzy
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }        " fzf
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markdown preview
 Plug 'lervag/vimtex'                                                     " Latex (\ll to compile)
+Plug 'mhinz/vim-startify'                                                " Startify page for dirs
 
 call plug#end()
 
@@ -42,7 +43,7 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 end
 
-local servers = {'ccls', 'rust_analyzer'}
+local servers = {'ccls', 'rust_analyzer', 'pyright'}
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
@@ -109,6 +110,8 @@ set signcolumn=no
 " }}}
 
 " ======================== Plugin Configurations ======================== "{{{
+
+let g:markdown_fenced_languages = ['html', 'js=javascript', 'cpp', 'c', 'py=python']
 
 let g:rainbow_active = 1                                " rainbow brackets
 let g:semshi#error_sign	= v:false                       " let python lsp handle this
