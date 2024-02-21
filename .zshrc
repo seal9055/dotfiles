@@ -91,6 +91,7 @@ alias cb='clear && cargo build'
 alias turbo='~/browser/v8/out.gn/x64.debug/d8 --trace-turbo --trace-turbo-path ~/browser/v8/out.gn/turbo --allow-natives-syntax'
 alias vim='nvim'
 alias ta='ctags -R && cscope -Rb'
+alias rg='rg -uuu'
 
 function dg() {
     dot $1.dot -Tpdf -o $1.pdf
